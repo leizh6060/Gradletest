@@ -3,7 +3,7 @@ class buildUtils implements Serializable {
 def steps
 buildUtils(steps) { this.steps = steps}
 def timedGradleBuild(tasks) {
-def gradleHome = steps.tool 'gradle3.2'
+def gradleHome = steps.tool 'gradle 6.2.1'
 steps.timestamps {
 steps.sh "${gradleHome}/bin/gradle ${tasks}"
 }
